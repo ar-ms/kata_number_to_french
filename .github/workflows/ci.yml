@@ -7,7 +7,7 @@ on:
 
 jobs:
   uv-ci-tests-kata-numbers:
-    name: python
+    name: uv-ci-tests-kata-numbers
     runs-on: ubuntu-latest
 
     steps:
