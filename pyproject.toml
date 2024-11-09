@@ -1,0 +1,23 @@
+[project]
+name = "kata-number-to-french"
+version = "0.1.0"
+description = "Simple program to convert a given positive integer number into French numbers."
+readme = "README.md"
+authors = [
+    { name = "Arms", email = "araheman.mouhamadsultane@gmail.com" }
+]
+requires-python = ">=3.13"
+dependencies = []
+
+[project.scripts]
+kata-number-to-french = "kata_number_to_french:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[dependency-groups]
+dev = [
+    "pytest>=8.3.3",
+    "ruff>=0.7.3",
+]
