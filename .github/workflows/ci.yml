@@ -1,5 +1,10 @@
 name: ci
 
+on:
+  pull_request:
+    branches:
+      - main
+
 jobs:
   uv-ci-tests-kata-numbers:
     name: python
