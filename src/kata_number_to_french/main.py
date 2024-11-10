@@ -45,11 +45,8 @@ def process_hundreds(num: int) -> str:
 
 
 def process_thousands(num: int) -> str:
-    num_str: str = str(num)
-    s_thousands = slice(0, -3)
-    s_hunders = slice(-3, None)
-    thousands = int(num_str[s_thousands])
-    hundreds = int(num_str[s_hunders])
+    thousands = num // 1_000
+    hundreds = num % 1_000
 
     ret = f"{process_hundreds(thousands)}-mille" if thousands > 1 else "mille"
     ret += f"-{process_hundreds(hundreds)}" if hundreds > 0 else ""
@@ -57,11 +54,8 @@ def process_thousands(num: int) -> str:
 
 
 def process_millions(num: int) -> str:
-    num_str: str = str(num)
-    s_millions = slice(0, -6)
-    s_thousands = slice(-6, None)
-    millions = int(num_str[s_millions])
-    thousands = int(num_str[s_thousands])
+    millions = num // 1_000_000
+    thousands = num % 1_000_000
 
     ret = f"{process_hundreds(millions)}-million"
     ret += "s" if millions > 1 else ""
